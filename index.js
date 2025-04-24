@@ -35,11 +35,14 @@ bot.on('text', async (ctx) => {
       Program: code
     });
 
+    const execTime = data.Stats ? `⏱ زمان اجرا: ${data.Stats.split(',')[0]}` : '⏱ زمان اجرا مشخص نیست';
     const buttons = Markup.inlineKeyboard([
       [Markup.button.callback('📤 خروجی', 'result')],
       [Markup.button.callback('⚠️ هشدار', 'warnings'), Markup.button.callback('❌ خطا', 'errors')],
       [Markup.button.callback('ℹ️ آمار اجرا', 'stats')]
     ]);
+
+
 
     ctx.reply(`کد با موفقیت اجرا شد. یکی از گزینه‌های زیر را انتخاب کن:`, buttons);
 

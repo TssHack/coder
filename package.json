@@ -1,0 +1,17 @@
+{
+  "name": "telegram-bot",
+  "version": "1.0.0",
+  "description": "A Telegram bot for running code using Rextester API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "vercel dev"
+  },
+  "author": "Ehsan Fazli",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "telegraf": "^4.6.0",
+    "dotenv": "^10.0.0"
+  }
+}
